@@ -38,7 +38,57 @@ using namespace std;
 
 
 /*  Solution */
+class Employee{
+    private:
+    int employee_ID;
+    string employee_name;
+    string employee_designation;
+    float emp_salary;
 
+
+    public:
+    Employee(){
+        employee_ID=123456789;
+        employee_name="Ismayil";
+        employee_designation="ML Engineer";
+        emp_salary=6500;
+    }
+
+
+    Employee(int empID_param, string empName_param, string empDesignation_param, float empSal_param){
+        employee_ID=empID_param;
+        employee_name=empName_param;
+        employee_designation=empDesignation_param;
+        emp_salary=empSal_param;
+    }
+
+
+
+    void setID(int empID_param){
+        employee_ID=empID_param;
+    }
+
+    void setName(string empName_param){
+        employee_name=empName_param;
+    }
+
+    void setDesignation(string empDesignation_param){
+        employee_designation=empDesignation_param;
+    }
+
+    void setSalary(float empSal_param){
+        emp_salary=empSal_param;
+    }
+
+
+
+    void displayDetails(){
+        cout<<"Employee ID: "<<employee_ID<<endl;
+        cout<<"Employee Name: "<<employee_name<<endl;
+        cout<<"Employee Designation: "<<employee_designation<<endl;
+        cout<<"Employee Salary in GBP: "<<emp_salary<<endl;
+    }
+};
 
 
 int main() {
