@@ -34,6 +34,31 @@ using namespace std;
 */
 
 
+class Book{
+
+    private:
+    string title;
+    string author;
+    int pub_year=0;
+    string isbn;
+
+    public:
+        void setBookDetails(string titleP, string authorP, int pub_yearP, string isbnP){
+            title=titleP;
+            author=authorP;
+            if(pub_yearP>1500){
+                pub_year=pub_yearP;
+            }
+            isbn=isbnP;
+        }
+
+        void displayBookDetails(){
+            cout << "Book title is " << title << endl;
+            cout << "Author is " << author << endl;
+            cout << "Publication year is " << pub_year << endl;
+            cout << "ISBN is " << isbn << endl;
+        }
+};
 
 /*  Solution */
 
