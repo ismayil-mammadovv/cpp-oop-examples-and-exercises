@@ -29,10 +29,41 @@ class BankAccount {
         // Constructor
         BankAccount(int accountNumber, const string &holderName, double initialBalance) {
             // TODO: Initialize member variables
+
+            this->accountNumber=accountNumber;
+            this->holderName=holderName;
+            balance=initialBalance;
         }
 
         // Member functions
         // TODO: Implement member functions for deposit, withdraw, and check balance
+
+        void deposit(double amount){
+            if(amount>0){
+                balance+=amount;
+            }else{
+                cout << "Invalid deposit amount!" << endl;
+            }
+        }
+
+        void withdraw(double amount){
+            if(balance>=amount && amount>0){
+                balance-=amount;
+            }else{
+                cout << "There is not enough balance to withdraw!!!" << endl;
+            }
+        }
+
+        double check_balance(){
+            return balance;
+        }
+
+
+        void display_balance(){
+            cout<<"Balance is:  "<<balance<<endl;
+        }
+
+
 };
 
 
