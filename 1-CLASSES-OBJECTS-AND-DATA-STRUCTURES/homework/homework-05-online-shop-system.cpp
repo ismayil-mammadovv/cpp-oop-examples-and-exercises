@@ -45,9 +45,105 @@ using namespace std;
 */
 
 
-/* 
-    Solution
-*/
+class Product{
+
+    private:
+        int product_id;
+        string product_name;
+        float product_price;
+
+
+    public:
+
+
+        //construtors:
+
+        Product(){
+            product_id=1123565;
+            product_name="Motorola";
+            product_price=275;
+        }
+
+        Product(int product_id,string product_name,float product_price){
+            this->product_id=product_id;
+            this->product_name=product_name;
+            this->product_price=product_price;
+        }
+
+        //Setters
+        void set_id(int product_id){
+            this->product_id=product_id;
+        }
+        void set_name(string product_name){
+            this->product_name=product_name;
+        }
+        void set_price(float product_price){
+            this->product_price=product_price;
+        }
+
+
+    //Getters:
+        int get_id()const{
+            return product_id;
+        }
+
+        string getProductName()const{
+            return product_name;
+        }
+
+        float get_prd_price()const{
+            return product_price;
+        }
+};
+
+
+class Order{
+    private:
+        int order_id;
+        string customer_name;
+        vector<Product> ordered_products;
+
+    public:
+        Order(int order_idP, string customer_nameP){
+            order_id=order_idP;
+            customer_name=customer_nameP;
+        }
+
+        //Getters:
+        void displayProducts(){
+            for(size_t i=0; i<ordered_products.size();i++){
+                cout<<ordered_products[i].get_id()<<endl;   
+            }
+        }
+
+        int getOrderID(){
+            return order_id;
+        }
+
+        string getCustomerName(){
+            return customer_name;
+        }
+
+        vector<Product> getOrderedProducts() {
+            return ordered_products;
+        }
+
+        void addProduct(Product product){
+           ordered_products.push_back(product);
+        }
+
+
+        double calculateOrderTotal(){
+            double total=0;
+            for(int i=0; i<ordered_products.size();i++){
+                total+=ordered_products[i].get_prd_price();
+                // cout<<ordered_products[i].get_prd_price<<endl;   
+            }
+            return total;
+            
+        }
+};
+
 
 
 
