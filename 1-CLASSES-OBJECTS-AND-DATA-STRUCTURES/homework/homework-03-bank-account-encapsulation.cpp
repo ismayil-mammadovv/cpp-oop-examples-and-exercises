@@ -71,6 +71,22 @@ class BankAccount {
 int main() {
 
     // TODO: Create an instance of the BankAccount class
+    BankAccount candiate1(36,"Ismayil",6500);
+
+    // TODO: Test the deposit, withdraw, and check balance operations
+    
+    candiate1.withdraw(250);
+    
+    candiate1.deposit(551);
+
+    candiate1.check_balance();
+
+    //Display Balance:
+    candiate1.display_balance();
+
+
+
+    // TODO: Create an instance of the BankAccount class
     // TODO: Test the deposit, withdraw, and check balance operations
 
     /*
@@ -81,7 +97,8 @@ int main() {
         3. Testing the functionality of your class in the main function by creating an instance 
         of BankAccount and performing deposit, withdrawal, and balance checks.
         
-        Remember to enforce encapsulation by keeping the member variables private and providing public member functions to access and modify them.
+        Remember to enforce encapsulation by keeping the member variables private and providing public member functions 
+        to access and modify them.
 
         This exercise will help you practice encapsulation and understand how to hide 
         implementation details while exposing a controlled interface to the users of your class!
